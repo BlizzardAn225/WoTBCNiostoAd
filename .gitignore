@@ -1,0 +1,37 @@
+# Gradle
+.gradle/
+build/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# 本机 SDK 路径等机器相关配置
+local.properties
+
+# 构建产物（不要分发编译好的 apk —— 使用者应自行编译并阅读源码）
+*.apk
+*.aab
+app/release/
+captures/
+.cxx/
+.externalNativeBuild/
+
+# 签名文件（绝不入库）
+*.jks
+*.keystore
+keystore.properties
+
+# 参考工程遗留 / 私有资料（一律不得公开）
+*.rar
+*.zip
+*.7z
+*.log
+*.txt
+!gradle/wrapper/gradle-wrapper.properties
+
+# 系统杂项
+.DS_Store
+Thumbs.db

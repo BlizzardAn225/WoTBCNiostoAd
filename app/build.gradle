@@ -1,0 +1,32 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.blizzard225.wotbiosad'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.blizzard225.wotbiosad"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // LSPosed / Xposed API (compileOnly -> not packaged into apk)
+    compileOnly 'de.robv.android.xposed:api:82'
+    // 注: 不要加 ':82:sources' 分类器，该仓库不一定提供 sources jar，会导致解析失败
+}
